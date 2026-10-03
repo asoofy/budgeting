@@ -1,0 +1,52 @@
+{
+  "name": "budgeting",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A small, private budgeting app that runs on your own computer. SvelteKit and SQLite, no cloud, no login.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asoofy/budgeting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/asoofy/budgeting/issues"
+  },
+  "homepage": "https://github.com/asoofy/budgeting#readme",
+  "engines": {
+    "node": ">=22.17"
+  },
+  "type": "module",
+  "scripts": {
+    "prepare": "svelte-kit sync || echo \"\"",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "seed": "tsx scripts/seed.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3"
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "^3.0.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.4",
+    "svelte": "^5.57.1",
+    "svelte-check": "^4.7.6",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true,
+    "esbuild@0.28.2": true
+  },
+  "imports": {
+    "#lib/*": "./src/lib/*"
+  }
+}
